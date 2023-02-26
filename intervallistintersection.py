@@ -9,13 +9,11 @@ def merge(f, s):
 
 def interval_intersection(first_list, second_list):
     merged = []
-    for f in first_list:
-        for s in second_list:
-            interval = merge(f,s)
-            if len(interval) == 0:
-                continue
-            merged.append(interval)
-    print(merged)
+    j = 0
+    for f in first_list
+
+
+
     return merged
 
 firstList = [[0,2],[5,10],[13,23],[24,25]]

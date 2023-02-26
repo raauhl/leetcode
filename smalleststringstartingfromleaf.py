@@ -1,5 +1,22 @@
 import functools
 
+def comparator(string1, string2):
+    i = j = 0
+    while i < len(string1) and j < len(string2):
+        if string1[i] != string2[j]:
+            break
+        i += 1
+        j += 1
+    
+    if i == len(string1):
+        return -1
+    
+    if j == len(string2):
+        return 1
+
+    return -1 if string1[i] < string2[j] else  1
+
+
 def smallest_from_leaf(root):
 
     parents = []

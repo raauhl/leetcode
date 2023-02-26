@@ -1,20 +1,12 @@
 def broken_calc(start_value, target):
 
-    if start_value == target:
-        return 0
-
-    if start_value*2 == target:
-        return 1
-
-    if start_value-1 == target:
-        return 1
-
-    minus = 1 + broken_calc(start_value-1, target)
-    if start_value > target:
-        return minus
+    if start_value >= target:
+        return target - start_value
     
-    prod = 1 + broken_calc(start_value*2, target)
-    return min(minus, prod)
+    if target%2 == 0:
+        return 1 + broken_calc(start_value, target // 2)
+        
+    return 1 + broken_calc(start_value, target // 2)
     
 
 
