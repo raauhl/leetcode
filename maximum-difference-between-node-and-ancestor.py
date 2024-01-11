@@ -6,7 +6,15 @@
 #         self.right = right
 class Solution:
     def maxAncestorDiff(self, root: Optional[TreeNode]) -> int:
-                
+        
+        """
+        at every node the interesting information to have is the smallest and largest number from
+        the left and right subtree. We can use these two values and compare with current node value
+        to find out the largest absolute difference and keep track of it throughout the recursion.
+
+        we return the new minimum and maximum back so that it can be used up.
+        """
+        
         def f(node):
                         
             if node.left is None and node.right is None:
